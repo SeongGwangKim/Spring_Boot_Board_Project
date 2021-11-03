@@ -1,10 +1,26 @@
+# 서버, 경로, 인코딩
+server:
+  port: 8000
+  servlet:
+    context-path: /SupplementsWebProject
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
 spring:
+#db 설정
   datasource:
     driver-class-name: oracle.jdbc.driver.OracleDriver
     url: jdbc:oracle:thin:@localhost:1521:XE
     username: scott
     password: TIGER
 
-server:
-  port: 8686
+#viewResoulver 
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+    
+
 
